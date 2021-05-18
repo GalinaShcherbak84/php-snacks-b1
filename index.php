@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+<!-- snack 1 -->
  <h1>Snack 1</h1>
  <?php
     $teams = [
@@ -29,12 +30,24 @@
             'puntiCasa' => 35
         ]
     ];
-    
   ?>
   <ul>
     <?php for($i = 0; $i < count($teams); $i++){?>
         <li> <?php echo $teams[$i]['casa'] .'-' .$teams[$i]['ospite'] .' '.'|'.' '.$teams[$i]['puntiCasa'] .'-' .$teams[$i]['puntiOspite']; ?></li>
     <?php } ?>
   </ul>
+  <!-- snack 2 -->
+  <h1>Snack 2</h1>
+  <?php
+    $name = $_GET['name'];
+    $email = $_GET['email'];
+    $age = $_GET['age'];
+        if(empty($email)||empty($name)||empty($age)||strpos($email, '@') === false||strpos($email, '.') === false|| 
+        strlen($name) < 3||is_numeric($age) === false){
+            echo 'Accesso negato';
+        }else{
+            echo 'Accesso riuscito';
+        };
+  ?>
 </body>
 </html>
