@@ -48,6 +48,20 @@
         }else{
             echo 'Accesso riuscito';
         };
+
   ?>
+   <!-- sneck 3 -->
+    <h1>Snack 3</h1>
+    <?php
+    $myArray = [];
+    while (count($myArray) <= 15) { 
+        $number = rand(1, 100);
+        if (!in_array($number, $myArray)) {
+             $myArray[] = $number;
+        }
+    };
+    var_dump($myArray);
+    ?>
+
 </body>
 </html>
